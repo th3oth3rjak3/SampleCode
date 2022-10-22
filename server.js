@@ -1,0 +1,10 @@
+import express from "express";
+const app = express();
+const PORT = process.env.PORT || 8080;
+import { otherRoutes } from "./otherRoutes.js";
+
+app.use(otherRoutes);
+
+app.listen(PORT, () => {
+    console.log(`Listening on port: ${PORT}`);
+});
